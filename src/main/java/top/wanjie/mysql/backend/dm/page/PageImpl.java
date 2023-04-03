@@ -1,5 +1,7 @@
 package top.wanjie.mysql.backend.dm.page;
 
+import top.wanjie.mysql.backend.dm.pageCache.PageCache;
+
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -14,7 +16,7 @@ public class PageImpl implements Page{
     private byte[] data;
     private Lock lock;
     private PageCache pc;
-    static final int PAGE_SIZE = 1 << 13;
+    public static final int PAGE_SIZE = 1 << 13;
 
     public PageImpl(int pageNumber, byte[] data, PageCache pc) {
         this.pageNumber = pageNumber;

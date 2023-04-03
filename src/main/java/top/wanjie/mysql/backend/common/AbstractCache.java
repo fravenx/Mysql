@@ -26,7 +26,7 @@ public abstract class AbstractCache<T> {
         references    = new HashMap<>();
         getting       = new HashMap<>();
         lock          = new ReentrantLock();
-
+        count         = 0;
     }
 
     protected T get(long key) {
@@ -72,6 +72,7 @@ public abstract class AbstractCache<T> {
         getting.remove(key);
         cache.put(key,obj);
         references.put(key,1);
+        count++;
         lock.unlock();
 
         return obj;
