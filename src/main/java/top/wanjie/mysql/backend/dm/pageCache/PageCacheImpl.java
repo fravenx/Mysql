@@ -16,7 +16,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @Author fraven
- * @Description
+ * @Description 基于引用计数器的页面缓存，在将页面从磁盘读取到内存和从内存中刷新的磁盘时使用
  * @Date 2023/04/03/14:24
  */
 public class PageCacheImpl extends AbstractCache<Page> implements PageCache{

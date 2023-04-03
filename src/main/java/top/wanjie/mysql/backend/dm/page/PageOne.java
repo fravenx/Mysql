@@ -6,7 +6,8 @@ import java.util.Arrays;
 
 /**
  * @Author fraven
- * @Description
+ * @Description 数据库第一个页面，用于校验数据库是否正常关闭，在数据库启动时校验100-107和108-115的字节数组是否相等，若不相等，则启动
+ * 故障恢复功能
  * @Date 2023/04/01/15:58
  */
 public class PageOne {

@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 /**
  * @Author fraven
- * @Description
+ * @Description 普通页，存放数据库数据
  * @Date 2023/04/01/16:25
  */
 public class PageX {
