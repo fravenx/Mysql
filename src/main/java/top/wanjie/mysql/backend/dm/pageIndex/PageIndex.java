@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @Author fraven
- * @Description 帮助挑选一个合适的页面进行插入，统计每个页面的剩余空闲大小，将每个页面大小分为40份，根据
+ * @Description 帮助挑选一个合适的页面进行插入，统计每个页面的剩余空闲大小，将每个页面大小分为40份
  * @Date 2023/04/03/16:43
  */
 public class PageIndex {
