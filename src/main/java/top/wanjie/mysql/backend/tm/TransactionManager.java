@@ -22,6 +22,7 @@ public interface TransactionManager {
     boolean isActive(long xid);
     boolean isCommitted(long xid);
     boolean isAborted(long xid);
+    void close();
 
     public static TransactionManagerImpl create(String path) {
         File file = new File(path + ".xid");

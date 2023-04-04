@@ -156,6 +156,7 @@ public class TransactionManagerImpl implements TransactionManager{
         return checkXid(xid,FIELD_TRAN_ABORTED);
     }
 
+    @Override
     public void close() {
         try {
             fc.close();
