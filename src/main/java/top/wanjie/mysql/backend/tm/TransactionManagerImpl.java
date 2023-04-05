@@ -24,7 +24,7 @@ public class TransactionManagerImpl implements TransactionManager{
     private static final byte FIELD_TRAN_COMMITTED = 1;
     private static final byte FIELD_TRAN_ABORTED = 2;
 
-    private static final long SUPER_XID = 0;
+    public static final long SUPER_XID = 0;
 
     RandomAccessFile raf = null;
     FileChannel fc = null;

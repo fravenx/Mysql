@@ -56,6 +56,7 @@ public class DataManagerImpl extends AbstractCache<DataItem> implements DataMana
         }
     }
 
+    // 修改数据时下日志
     public void logDataItem(long xid, DataItem di) {
         byte[] log = Recover.wrapUpdateLog(xid, di);
         logger.log(log);
@@ -108,6 +109,7 @@ public class DataManagerImpl extends AbstractCache<DataItem> implements DataMana
         return Types.addressToUid(pg.getPageNumber(), offset);
     }
 
+    // 关闭DataItem缓存，日志，设置第一页字节校验，关闭页面缓存
     @Override
     public void close() {
         super.close();
