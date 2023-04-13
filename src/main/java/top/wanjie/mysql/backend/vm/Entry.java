@@ -58,9 +58,9 @@ public class Entry {
     public byte[] data() {
        di.rLock();
        try {
-           SubArray raw = di.getRaw();
-           byte[] data = new byte[raw.end - raw.start - OF_DATA];
-           System.arraycopy(raw, raw.start + OF_DATA, data, 0, data.length);
+           SubArray sa = di.data();
+           byte[] data = new byte[sa.end - sa.start - OF_DATA];
+           System.arraycopy(sa.raw, sa.start + OF_DATA, data, 0, data.length);
            return data;
        } finally {
          di.rUnLock();

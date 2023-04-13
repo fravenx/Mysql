@@ -61,7 +61,7 @@ public interface TransactionManager {
     }
 
     public static TransactionManagerImpl open(String path){
-        File file = new File(path + "xid");
+        File file = new File(path + ".xid");
         if(!file.exists()) {
             Panic.panic(Error.FileExistsException);
         }

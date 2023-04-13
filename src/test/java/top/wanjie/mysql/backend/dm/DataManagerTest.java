@@ -97,7 +97,7 @@ public class DataManagerTest {
     @Test
     public void testDMSingle() throws Exception {
         TransactionManager tm0 = new MockTransactionManager();
-        DataManager dm0 = DataManager.create("/tmp/TESTDMSingle", PageCache.PAGE_SIZE*10, tm0);
+        DataManager dm0 = DataManager.create("/tmp/TESTDMSingle1", PageCache.PAGE_SIZE*10, tm0);
         DataManager mdm = MockDataManager.newMockDataManager();
 
         int tasksNum = 10000;
@@ -115,7 +115,7 @@ public class DataManagerTest {
     @Test
     public void testDMMulti() throws InterruptedException {
         TransactionManager tm0 = new MockTransactionManager();
-        DataManager dm0 = DataManager.create("/tmp/TestDMMulti", PageCache.PAGE_SIZE*10, tm0);
+        DataManager dm0 = DataManager.create("/tmp/TestDMMulti1", PageCache.PAGE_SIZE*10, tm0);
         DataManager mdm = MockDataManager.newMockDataManager();
 
         int tasksNum = 500;

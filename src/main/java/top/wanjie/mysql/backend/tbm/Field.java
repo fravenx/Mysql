@@ -36,7 +36,7 @@ public class Field {
     public static Field loadField(Table tb, long uid) {
         byte[] raw = null;
         try{
-            ((TableManagerImpl)tb.tbm).vm.read(TransactionManagerImpl.SUPER_XID, uid);
+            raw = ((TableManagerImpl)tb.tbm).vm.read(TransactionManagerImpl.SUPER_XID, uid);
         } catch (Exception e) {
             Panic.panic(e);
         }
